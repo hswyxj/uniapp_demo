@@ -2,17 +2,18 @@
     <view class="content">
         <view v-if="hasLogin">
             <view class='margin-top'>
-					<view class="controls-title margin-top">
-						<movable-view :x="x" :y="y" direction="all" @change="onChange" damping=500  @tap="bindusercenter">
-							<view class="cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg)"></view>
-						</movable-view>
-					</view>
-					
 					<view class="solid-bottom text-xl padding margin-top">
 						<text class='text-black text-bold'>您好 {{userName}}，您已成功登录。</text>
 					</view>
 					<view class="padding">
 				           <button class="cu-btn block bg-gradual-blue margin-top lg shadow" @tap="bindusercenter">个人中心</button>
+					</view>
+					<view class="controls-title margin-top">
+						<movable-area>
+						    <movable-view :x="x" :y="y" direction="all" @change="onChange" out-of-bounds="true" damping=500  @tap="bindusercenter">
+							    <view class="cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg)"></view>
+						    </movable-view>
+						</movable-area>
 					</view>
             </view>
 		  
@@ -76,6 +77,8 @@
 		    const res = uni.getSystemInfoSync();
 			this.x=res.windowWidth-50,
 			this.y=(res.windowHeight-40)/2
+			console.log(res.windowWidth)
+			console.log(res.windowHeight)
 	    },
 		components: {
 		    mInput
@@ -203,7 +206,7 @@
 			    this.old.y = e.detail.y
 				// console.log( this.old.y)
 				if (this.old.y > Height-20){
-					console.log("1")
+					// console.log("1")
 					this.x = this.old.x
 					this.y = this.old.y
 					this.$nextTick(function() {
@@ -211,7 +214,7 @@
 					    this.x = this.old.x
 					})	
 				} else if (this.old.y < -10){
-					console.log("1")
+					// console.log("1")
 					this.x = this.old.x
 					this.y = this.old.y
 					this.$nextTick(function() {
@@ -219,7 +222,7 @@
 					    this.x = this.old.x
 					})	
 				}else if(this.old.x > Width || this.old.x > Width/2){
-					console.log("2")
+					// console.log("2")
 					this.x = this.old.x
 					this.y = this.old.y
 					this.$nextTick(function() {
@@ -227,7 +230,7 @@
 					    this.x = Width+25
 					})
 				}else if(this.old.x  < -25 || this.old.x < Width/2){
-					console.log("2")
+					// console.log("2")
 					this.x = this.old.x
 					this.y = this.old.y
 					this.$nextTick(function() {
@@ -243,8 +246,14 @@
 </script>
 
 <style>
-	cover-view,
-    cover-image {
-        display: inline-block;
-    }
+    movable-view {
+		align-items: center;
+	}
+
+	movable-area {
+		height: 600upx;
+		width: 100%;
+		background-color: #D8D8D8;
+		overflow: hidden;
+	}
 </style>

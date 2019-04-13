@@ -163,6 +163,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../GitHub/uniapp_demo/service.js"));
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _objectSpread(target) {for (var i = 1; i < arguments.length; i++) {var source = arguments[i] != null ? arguments[i] : {};var ownKeys = Object.keys(source);if (typeof Object.getOwnPropertySymbols === 'function') {ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {return Object.getOwnPropertyDescriptor(source, sym).enumerable;}));}ownKeys.forEach(function (key) {_defineProperty(target, key, source[key]);});}return target;}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var mInput = function mInput() {return __webpack_require__.e(/*! import() | components/m-input */ "components/m-input").then(__webpack_require__.bind(null, /*! ../../components/m-input.vue */ "../../../GitHub/uniapp_demo/components/m-input.vue"));};var _default =
 
@@ -176,6 +177,8 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     var res = uni.getSystemInfoSync();
     this.x = res.windowWidth - 50,
     this.y = (res.windowHeight - 40) / 2;
+    console.log(res.windowWidth);
+    console.log(res.windowHeight);
   },
   components: {
     mInput: mInput },
@@ -303,7 +306,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
       this.old.y = e.detail.y;
       // console.log( this.old.y)
       if (this.old.y > Height - 20) {
-        console.log("1");
+        // console.log("1")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
@@ -311,7 +314,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           this.x = this.old.x;
         });
       } else if (this.old.y < -10) {
-        console.log("1");
+        // console.log("1")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
@@ -319,7 +322,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           this.x = this.old.x;
         });
       } else if (this.old.x > Width || this.old.x > Width / 2) {
-        console.log("2");
+        // console.log("2")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
@@ -327,7 +330,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           this.x = Width + 25;
         });
       } else if (this.old.x < -25 || this.old.x < Width / 2) {
-        console.log("2");
+        // console.log("2")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
