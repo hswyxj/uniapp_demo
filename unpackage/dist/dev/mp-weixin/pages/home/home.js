@@ -299,7 +299,7 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
     },
     onChange: function onChange(e) {
       var res = uni.getSystemInfoSync();
-      var Width = res.windowWidth - 50;
+      var Width = res.windowWidth - 25;
       var Height = res.windowHeight - 45;
 
       this.old.x = e.detail.x;
@@ -327,15 +327,15 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
         this.y = this.old.y;
         this.$nextTick(function () {
           this.y = this.old.y;
-          this.x = Width + 25;
+          this.x = Width;
         });
-      } else if (this.old.x < -45 || this.old.x < Width / 2) {
+      } else if (this.old.x < -15 || this.old.x < Width / 2) {
         // console.log("2")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
           this.y = this.old.y;
-          this.x = -45;
+          this.x = -15;
         });
       }
     } }) };exports.default = _default;
