@@ -1,7 +1,7 @@
 {
-    "name" : "hdemo",
-    "appid" : "__UNI__5B3211E",
-    "description" : "",
+    "name" : "uniapp_demo",
+    "appid" : "__UNI__805CC01",
+    "description" : "应用描述",
     "versionName" : "1.0.0",
     "versionCode" : "100",
     "transformPx" : false,
@@ -46,24 +46,33 @@
             },
             "ios" : {},
             /* ios打包配置 */
-            "sdkConfigs" : {}
+            "sdkConfigs" : {},
+            /* SDK配置 */
+            "orientation" : [
+                "portrait-primary",
+                "landscape-primary",
+                "portrait-secondary",
+                "landscape-secondary"
+            ]
         }
     },
-    /* SDK配置 */
     "quickapp" : {},
     /* 快应用特有相关 */
     "mp-weixin" : {
         /* 小程序特有相关 */
-        "appid" : "",
+        "appid" : "wxbb2326ee5b6e55da",
         "setting" : {
-            "urlCheck" : false
+            "urlCheck" : false,
+            "es6" : true,
+            "postcss" : false,
+            "minified" : false
         },
-        "usingComponents" : true
+        "usingComponents" : true,
+        "permission" : {}
     },
     "h5" : {
         "devServer" : {
-            "https" : true,
-            "port" : 8080
+            "https" : true
         }
     }
 }

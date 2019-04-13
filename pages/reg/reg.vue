@@ -5,22 +5,25 @@
 				<block slot="backText">返回</block>
 				<block slot="content">注册中心</block>
 			</cu-custom>
-            <view class="cu-form-group margin-top shadow">
-                <text class="title">账号 ：</text>
-                <input focus clearable v-model="account" placeholder="请输入账号"></input>
-            </view>
-            <view class="cu-form-group shadow">
-            	<view class="title">密码 ：</view>
-            	<m-input type="password" displayable v-model="password" placeholder="请输入密码"></m-input>
-            </view>
-            <view class="cu-form-group shadow">
-                <text class="title">邮箱 ：</text>
-                <input clearable v-model="email" placeholder="请输入邮箱"></input>
-            </view>
+			<view class="cu-list menu sm-border card-menu margin-top">
+				<view class="cu-form-group card-menu shadow">
+				    <text class="title">账号 ：</text>
+				    <input focus v-model="account" placeholder="请输入账号"></input>
+				</view>
+				<view class="cu-form-group shadow">
+					<view class="title">密码 ：</view>
+					<input type="password" v-model="password" placeholder="请输入密码"></input>
+				</view>
+				<view class="cu-form-group shadow">
+				    <text class="title">邮箱 ：</text>
+				    <input clearable v-model="email" placeholder="请输入邮箱"></input>
+				</view>
+			</view>
         </view>
-        <view class="btn-row">
-            <button type="primary" class="cu-btn block bg-gradual-blue margin-tb-sm lg shadow" @tap="register">注 册</button>
+		<view class="cu-list card-menu margin-top">
+            <button type="primary" class="cu-btn block bg-gradual-blue lg shadow" @tap="register">注 册</button>
         </view>
+
     </view>
 </template>
 
@@ -72,7 +75,7 @@
                     password: this.password,
                     email: this.email
                 }
-				console.log(data)
+				// console.log(data)
                 service.addUser(data);
                 uni.showToast({
                     title: '注册成功'

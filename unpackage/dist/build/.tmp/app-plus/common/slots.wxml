@@ -1,0 +1,23 @@
+<import src="/colorui/components/cu-custom.vue.wxml" />
+<import src="/components/m-input.vue.wxml" />
+<import src="/common/slots.wxml" />
+<import src="/components/m-icon/m-icon.vue.wxml" />
+
+<template name="6004c5b0-default-6004c5b0-0"></template>
+
+<template name="6004c5b0-backText-6004c5b0-0">返回</template>
+
+<template name="6004c5b0-content-6004c5b0-0">个人中心</template>
+
+<template name="46f59c72-default-46f59c72-0"></template>
+
+<template name="46f59c72-backText-46f59c72-0">返回</template>
+
+<template name="46f59c72-content-46f59c72-0">注册中心</template>
+
+<template name="0893d578-default-0893d578-0"></template>
+
+<template name="0893d578-backText-0893d578-0">返回</template>
+
+<template name="0893d578-content-0893d578-0">背景</template>
+

@@ -4,18 +4,18 @@
 			<block slot="backText">返回</block>
 			<block slot="content">背景</block>
 		</cu-custom>
-        <view class="input-group">
-            <view class="cu-form-group margin-top shadow">
+        <view class="cu-list menu sm-border card-menu margin-top">
+            <view class="cu-form-group card-menu shadow shadow">
                 <text class="title">邮箱：</text>
-                <input type="text" focus clearable v-model="email" placeholder="请输入邮箱"><input>
+                <input type="text" v-model="email" placeholder="请输入邮箱"><input>
             </view>
         </view>
+		<view class="cu-list card-menu margin-top">
+		    <button type="primary" class="cu-btn block bg-gradual-blue margin-tb-sm lg shadow" @tap="findPassword">
+			    <text class="primary" @tap="bindLogin">提 交</text>
+		    </button>
+		</view>
 
-        <view class="btn-row">
-            <button type="primary" class="cu-btn block bg-gradual-blue margin-tb-sm lg shadow" @tap="findPassword">
-				<text class="primary" @tap="bindLogin">提 交</text>
-			</button>
-        </view>
     </view>
 </template>
 

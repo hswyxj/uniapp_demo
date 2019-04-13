@@ -1,0 +1,37 @@
+
+.page {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.video {
+    position: relative;
+}
+cover-view,
+cover-image {
+    display: inline-block;
+}
+.img {
+    position: absolute;
+    width: 100rpx;
+    height: 100rpx;
+    top: 50%;
+    margin-top: -50rpx;
+}
+.controls-play {
+    left: 50rpx;
+}
+.controls-pause {
+    right: 50rpx;
+}
+.controls-title {
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
+}
+
