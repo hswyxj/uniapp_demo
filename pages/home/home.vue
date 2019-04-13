@@ -2,17 +2,17 @@
     <view class="content">
         <view v-if="hasLogin">
             <view class='margin-top'>
-					<view class="solid-bottom text-xl padding margin-top">
-						<text class='text-black text-bold'>您好 {{userName}}，您已成功登录。</text>
-					</view>
-					<view class="padding">
-				           <button class="cu-btn block bg-gradual-blue margin-top lg shadow" @tap="bindusercenter">个人中心</button>
-					</view>
 					<view class="controls-title margin-top">
 						<movable-area>
-						    <movable-view :x="x" :y="y" direction="all" @change="onChange" out-of-bounds="true" damping=500  @tap="bindusercenter">
+						    <movable-view :x="x" :y="y" direction="all" @change="onChange" out-of-bounds="true" damping=300  @tap="bindusercenter">
 							    <view class="cu-avatar lg round" style="background-image:url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10001.jpg)"></view>
 						    </movable-view>
+							<view class="solid-bottom text-xl padding margin-top">
+								<text class='text-black text-bold'>您好 {{userName}}，您已成功登录。</text>
+							</view>
+							<view class="padding">
+							       <button class="cu-btn block bg-gradual-blue margin-top lg shadow" @tap="bindusercenter">个人中心</button>
+							</view>
 						</movable-area>
 					</view>
             </view>
@@ -85,8 +85,8 @@
 		},
 		data(){
 			return{
-				x: 0,
-				y: 0,
+				x: 325,
+				y: 310,
 				old: {
 				    x: 0,
 				    y: 0
@@ -229,13 +229,13 @@
 					    this.y = this.old.y
 					    this.x = Width+25
 					})
-				}else if(this.old.x  < -25 || this.old.x < Width/2){
+				}else if(this.old.x  < -45 || this.old.x < Width/2){
 					// console.log("2")
 					this.x = this.old.x
 					this.y = this.old.y
 					this.$nextTick(function() {
 					    this.y = this.old.y
-					    this.x = -25
+					    this.x = -45
 					})
 				}
 			},
@@ -251,9 +251,9 @@
 	}
 
 	movable-area {
-		height: 600upx;
+		height: 2000upx;
 		width: 100%;
-		background-color: #D8D8D8;
+		/* background-color: #D8D8D8; */
 		overflow: hidden;
 	}
 </style>

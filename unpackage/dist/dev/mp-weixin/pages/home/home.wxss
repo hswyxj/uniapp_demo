@@ -6,9 +6,9 @@ movable-view {
 		        align-items: center;
 }
 movable-area {
-		height: 600rpx;
+		height: 2000rpx;
 		width: 100%;
-		background-color: #D8D8D8;
+		/* background-color: #D8D8D8; */
 		overflow: hidden;
 }
 

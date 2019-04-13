@@ -185,8 +185,8 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
 
   data: function data() {
     return {
-      x: 0,
-      y: 0,
+      x: 325,
+      y: 310,
       old: {
         x: 0,
         y: 0 },
@@ -329,13 +329,13 @@ var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.j
           this.y = this.old.y;
           this.x = Width + 25;
         });
-      } else if (this.old.x < -25 || this.old.x < Width / 2) {
+      } else if (this.old.x < -45 || this.old.x < Width / 2) {
         // console.log("2")
         this.x = this.old.x;
         this.y = this.old.y;
         this.$nextTick(function () {
           this.y = this.old.y;
-          this.x = -25;
+          this.x = -45;
         });
       }
     } }) };exports.default = _default;
