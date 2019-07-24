@@ -2,17 +2,17 @@
     <view class="content">
 		<cu-custom bgColor="bg-gradual-blue shadow" :isBack="true">
 			<block slot="backText">返回</block>
-			<block slot="content">背景</block>
+			<block slot="content">忘记密码</block>
 		</cu-custom>
         <view class="cu-list menu sm-border card-menu margin-top">
-            <view class="cu-form-group card-menu shadow shadow">
+            <view class="cu-form-group shadow">
                 <text class="title">邮箱：</text>
-                <input type="text" v-model="email" placeholder="请输入邮箱"><input>
+				<input clearable v-model="email" placeholder="请输入邮箱"></input>
             </view>
         </view>
 		<view class="cu-list card-menu margin-top">
 		    <button type="primary" class="cu-btn block bg-gradual-blue margin-tb-sm lg shadow" @tap="findPassword">
-			    <text class="primary" @tap="bindLogin">提 交</text>
+			    <text class="primary" id="email" @tap="bindLogin">提 交</text>
 		    </button>
 		</view>
 

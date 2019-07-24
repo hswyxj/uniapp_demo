@@ -4,9 +4,11 @@ movable-view {
 		-webkit-align-items: center;
 		    -ms-flex-align: center;
 		        align-items: center;
+		height: 100rpx;
+		width: 100rpx;
 }
 movable-area {
-		height: 2000rpx;
+		height: 560px;
 		width: 100%;
 		/* background-color: #D8D8D8; */
 		overflow: hidden;

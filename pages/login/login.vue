@@ -1,17 +1,17 @@
 <template>
     <view class="content">
-        <view class="input-group margin-top shadow">
+        <view class="input-group">
 			<view class="cu-form-group">
 				<view class="title">账号：</view>
-				<input focus v-model="account" placeholder="请输入账号" id="account"></input>
+				<input clearable focus v-model="account" placeholder="请输入账号" name="input"></input>
 		    </view>
 		    <view class="cu-form-group">
 			    <view class="title">密码：</view>
-			    <input type="password" password="true" v-model="password" id="password" placeholder="请输入密码"></input>
+			    <m-input type="password" displayable v-model="password" placeholder="请输入密码"></m-input>
 			</view>
 		</view>
 		<view class="btn-row">
-			<button class="cu-btn block bg-gradual-blue margin-tb-sm lg shadow" @tap="bindLogin">登 录</button>
+			<button class="cu-btn block bg-gradual-blue margin-tb-sm lg" @tap="bindLogin">登 录</button>
 		</view>
 		<view class="cu-btn block">
 		<navigator class="text-blue padding" url="../reg/reg">注册账号</navigator>
@@ -46,6 +46,35 @@
 	    computed: mapState(['forcedLogin']),
 	    methods: {
 	        ...mapMutations(['login']),
+	        initProvider() {
+	            const filters = ['weixin', 'qq', 'sinaweibo'];
+	            uni.getProvider({
+	                service: 'oauth',
+	                success: (res) => {
+	                    if (res.provider && res.provider.length) {
+	                        for (let i = 0; i < res.provider.length; i++) {
+	                            if (~filters.indexOf(res.provider[i])) {
+	                                this.providerList.push({
+	                                    value: res.provider[i],
+	                                    image: '../../static/img/' + res.provider[i] + '.png'
+	                                });
+	                            }
+	                        }
+	                        this.hasProvider = true;
+	                    }
+	                },
+	                fail: (err) => {
+	                    console.error('获取服务供应商失败：' + JSON.stringify(err));
+	                }
+	            });
+	        },
+	        initPosition() {
+	            /**
+	             * 使用 absolute 定位，并且设置 bottom 值进行定位。软键盘弹出时，底部会因为窗口变化而被顶上来。
+	             * 反向使用 top 进行定位，可以避免此问题。
+	             */
+	            this.positionTop = uni.getSystemInfoSync().windowHeight - 100;
+	        },
 	        bindLogin() {
 	            /**
 	             * 客户端对账号信息进行一些必要的校验。
@@ -122,6 +151,10 @@
 	
 	        }
 	    },
+	    onReady() {
+	        this.initPosition();
+	        this.initProvider();
+	    }
 	}
 </script>
 

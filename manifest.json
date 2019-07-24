@@ -13,7 +13,9 @@
             "autoclose" : true,
             "delay" : 0
         },
-        "modules" : {},
+        "modules" : {
+            "OAuth" : {}
+        },
         /* 模块配置 */
         "distribute" : {
             /* 应用发布信息 */
@@ -46,7 +48,14 @@
             },
             "ios" : {},
             /* ios打包配置 */
-            "sdkConfigs" : {},
+            "sdkConfigs" : {
+                "oauth" : {
+                    "weixin" : {
+                        "appid" : "wxbb2326ee5b6e55da",
+                        "appsecret" : "8bb3470e9423bafea001ad94aa3ff8cd"
+                    }
+                }
+            },
             /* SDK配置 */
             "orientation" : [
                 "portrait-primary",
@@ -58,6 +67,18 @@
     },
     "quickapp" : {},
     /* 快应用特有相关 */
+    "payment" : {
+        // Apple应用内支付
+        "appleiap" : {},
+        // 支付宝支付
+        "alipay" : {
+            "scheme" : ""
+        },
+        // 微信支付
+        "weixin" : {
+            "appid" : "wxbb2326ee5b6e55da"
+        }
+    },
     "mp-weixin" : {
         /* 小程序特有相关 */
         "appid" : "wxbb2326ee5b6e55da",
@@ -72,7 +93,12 @@
     },
     "h5" : {
         "devServer" : {
-            "https" : true
+            "https" : false
+        },
+        "title" : "app测试",
+        "template" : "home.html",
+        "router" : {
+            "mode" : "history"
         }
     }
 }

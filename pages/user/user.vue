@@ -7,17 +7,27 @@
 			</cu-custom>
 			
 			<view class="cu-list menu sm-border card-menu margin-top">
-				<view class="cu-item arrow">
+				<view class="cu-item cu-form-group">
 					<view class="content">
 						<text class="icon-circlefill text-grey"></text>
-						<text class="text-grey">图标 + 标题</text>
+						<text class="text-grey">普通选择</text>
 					</view>
+					<picker @change="PickerChange" :value="index" :range="picker">
+						<view class="picker">
+						    {{index>-1?picker[index]:'单选项'}}
+						</view>
+					</picker>
 				</view>
-				<view class="cu-item arrow">
+		    	<view class="cu-item arrow">
 					<view class="content">
 						<image src="/static/logo.png" class="png" mode="aspectFit"></image>
-						<text class="text-grey">图片 + 标题</text>
+						<text class="text-grey">日期选项</text>
 					</view>
+					<picker mode="date" :value="date" start="2015-09-01" end="2020-09-01" @change="DateChange">
+						<view class="picker">
+							{{date}}
+						</view>
+					</picker>
 				</view>
 				<view class="cu-item">
 					<view class="content padding-tb-sm">
@@ -32,8 +42,8 @@
 				</view>
 				
 			</view>
-			<view class="cu-list card-menu">
-			    <button class="cu-btn block bg-gradual-blue lg" @tap="bindLogout">退出登录</button>
+			<view class="cu-list sm-border card-menu ">
+			    <button class="cu-btn block bg-gradual-blue margin-tb-sm lg" @tap="bindLogout">退出登录</button>
 			</view>
 			
 		</view>
@@ -60,11 +70,21 @@
 		},
 		data(){
 			return{
-				skin: false
+				index: -1,
+				skin: false,
+				picker: ['选择1', '选择2', '选择3'],
+				date: '2018-12-25'
 			}
 		},
         methods: {
             ...mapMutations(['logout']),
+			PickerChange(e) {
+				this.index = e.detail.value
+			},
+			DateChange(e) {
+				this.date = e.detail.value
+			},
+			
             bindLogin() {
                 uni.navigateTo({
                     url: '../home/home',

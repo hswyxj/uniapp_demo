@@ -1,7 +1,6 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/login/login",
     "pages/reg/reg",
     "pages/pwd/pwd",
     "pages/user/user"
@@ -10,11 +9,12 @@
   "window": {
     "navigationStyle": "custom",
     "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "ColorUi for UniApp",
+    "navigationBarTitleText": "测试demo",
     "navigationBarBackgroundColor": "#0081ff"
   },
   "permission": {},
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

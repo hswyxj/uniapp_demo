@@ -1,6 +1,0 @@
-
-cover-view,
-    cover-image {
-        display: inline-block;
-}
-

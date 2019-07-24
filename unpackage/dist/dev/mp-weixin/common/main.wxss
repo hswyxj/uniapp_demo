@@ -1,14 +1,8 @@
-/*
-  ColorUi for uniApp  v2.1.3 | by 文晓港 2019年4月1日22:58:47
-  仅供学习交流，如作它用所承受的法律责任一概与作者无关
-  使用ColorUi开发扩展与插件时，请注明基于ColorUi开发
-  
-  （QQ交流群：240787041）
-  文档：http://www.color-ui.com/
-*/
+
 page {
 	max-width: 750px;
 }
+
 /* ==================
         初始化
  ==================== */
@@ -70,6 +64,7 @@ image {
 .radius {
 	border-radius: 6rpx;
 }
+
 /* ==================
           图片
  ==================== */
@@ -110,6 +105,7 @@ image.loading::after {
 .response {
 	width: 100%;
 }
+
 /* ==================
          开关
  ==================== */
@@ -163,6 +159,7 @@ switch.checked::before {
 	        transform: scale(0, 0);
 }
 
+
 radio::before,
 checkbox::before {
 	font-family: "cuIcon";
@@ -195,6 +192,7 @@ checkbox.round .wx-checkbox-input,
 checkbox.round .uni-checkbox-input {
 	border-radius: 100rpx;
 }
+
 
 switch[checked]::before {
 	-webkit-transform: scale(0, 0);
@@ -563,9 +561,11 @@ radio.white.checked .uni-radio-input {
 	background-color: var(--white) !important;
 	color: #666 !important;
 }
+
 /* ==================
           边框
  ==================== */
+
 /* -- 实线 -- */
 .solid,
 .solid-top,
@@ -646,6 +646,7 @@ radio.white.checked .uni-radio-input {
 .solids-left::after {
 	border-left: 8rpx solid #eee;
 }
+
 /* -- 虚线 -- */
 .dashed::after {
 	border: 1rpx dashed #ddd;
@@ -662,6 +663,7 @@ radio.white.checked .uni-radio-input {
 .dashed-left::after {
 	border-left: 1rpx dashed #ddd;
 }
+
 /* -- 阴影 -- */
 .shadow {
 	-webkit-box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
@@ -722,6 +724,7 @@ radio.white.checked .uni-radio-input {
 	    -ms-transform: scale(1, 1);
 	        transform: scale(1, 1);
 }
+
 /* ==================
           按钮
  ==================== */
@@ -843,6 +846,7 @@ button.icon.lg {
 	opacity: 0.6;
 	color: var(--white);
 }
+
 /* ==================
           徽章
  ==================== */
@@ -974,6 +978,7 @@ button.icon.lg {
 	top: -4rpx;
 	right: -4rpx;
 }
+
 /* ==================
           头像
  ==================== */
@@ -1038,6 +1043,7 @@ button.icon.lg {
 	margin-left: -20rpx;
 	border: 1rpx solid #f1f1f1;
 }
+
 /* ==================
          进度条
  ==================== */
@@ -1127,6 +1133,7 @@ to {
 		background-position: 0 0;
 }
 }
+
 /* ==================
           加载
  ==================== */
@@ -1287,6 +1294,7 @@ to {
 		transform: rotate(360deg);
 }
 }
+
 /* ==================
           列表
  ==================== */
@@ -1629,6 +1637,7 @@ to {
 	margin-left: 30rpx;
 	border-radius: 20rpx
 }
+
 /* ==================
           操作条
  ==================== */
@@ -2046,6 +2055,7 @@ to {
 	width: calc(100% - 440rpx);
 }
 
+
 .cu-custom .cu-bar .content image {
 	height: 60rpx;
 	width: 240rpx;
@@ -2117,6 +2127,7 @@ to {
 	text-align: center;
 	font-size: 34rpx;
 }
+
 /* ==================
          导航栏
  ==================== */
@@ -2136,6 +2147,7 @@ to {
 .nav .cu-item.cur {
 	border-bottom: 4rpx solid;
 }
+
 /* ==================
          时间轴
  ==================== */
@@ -2210,6 +2222,7 @@ to {
 .cu-timeline>.cu-item>.content+.content {
 	margin-top: 20rpx;
 }
+
 /* ==================
          聊天
  ==================== */
@@ -2357,6 +2370,7 @@ to {
 	max-width: 400rpx;
 	line-height: 1.4;
 }
+
 /* ==================
          卡片
  ==================== */
@@ -2429,6 +2443,7 @@ to {
 	height: 320rpx;
 	border-radius: 6rpx;
 }
+
 /* card.dynamic>.cu-item .comment {
   padding: 20upx;
   background-color: #f1f1f1;
@@ -2486,6 +2501,7 @@ to {
 	height: 4.8em;
 	overflow: hidden;
 }
+
 /* ==================
          表单
  ==================== */
@@ -2587,6 +2603,7 @@ to {
 .cu-form-group textarea[disabled] .placeholder {
 	color: transparent;
 }
+
 /* ==================
          模态窗口
  ==================== */
@@ -2689,6 +2706,7 @@ to {
 	    -ms-transform: translateX(0%);
 	        transform: translateX(0%);
 }
+
 /* ==================
          轮播
  ==================== */
@@ -2835,6 +2853,7 @@ swiper.round-dot .uni-swiper-dot.uni-swiper-dot-active {
 	border-radius: 6rpx;
 	overflow: hidden;
 }
+
 /* ==================
           步骤条
  ==================== */
@@ -2971,9 +2990,11 @@ scroll-view.cu-steps .cu-item {
 .cu-steps .cu-item[class*="text-"] .num.err::after {
 	content: "\E646";
 }
+
 /* ==================
           布局
  ==================== */
+
 /*  -- flex弹性布局 -- */
 .flex {
 	display: -webkit-box;
@@ -3115,6 +3136,7 @@ scroll-view.cu-steps .cu-item {
 	    -ms-flex-pack: distribute;
 	        justify-content: space-around;
 }
+
 /* grid布局 */
 .grid {
 	display: -webkit-box;
@@ -3220,6 +3242,7 @@ scroll-view.cu-steps .cu-item {
 .grid.col-5>view {
 	width: 20%;
 }
+
 /*  -- 内外边距 -- */
 .margin-0 {
 	margin: 0;
@@ -3457,6 +3480,7 @@ scroll-view.cu-steps .cu-item {
 	padding-top: 50rpx;
 	padding-bottom: 50rpx;
 }
+
 /* -- 浮动 --  */
 .cf::after,
 .cf::before {
@@ -3472,6 +3496,7 @@ scroll-view.cu-steps .cu-item {
 .fr {
 	float: right;
 }
+
 /* ==================
           背景
  ==================== */
@@ -3776,6 +3801,7 @@ scroll-view.cu-steps .cu-item {
 	z-index: 0;
 	pointer-events: none;
 }
+
 /* ==================
           文本
  ==================== */
@@ -4853,6 +4879,7 @@ button[class*="icon-"] {
 .icon-btn:before {
 	content: "\E601";
 }
+
 /*每个页面公共css */
 .nav-list {
 	display: -webkit-box;

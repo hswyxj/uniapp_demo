@@ -12,10 +12,12 @@ const getUsers = function () {
 }
 
 const addUser = function (userInfo) {
+	console.log(userInfo)
     let users = getUsers();
     users.push({
         account: userInfo.account,
-        password: userInfo.password
+        password: userInfo.password,
+		email: userInfo.email
     });
     uni.setStorageSync(USERS_KEY, JSON.stringify(users));
 }

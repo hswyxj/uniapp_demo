@@ -1,5 +1,4 @@
 {
-  "navigationBarTitleText": "",
   "usingComponents": {
     "m-input": "/components/m-input"
   }
